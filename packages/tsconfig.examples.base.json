@@ -1,0 +1,40 @@
+{
+  "version": "3.2.2",
+  "compilerOptions": {
+    "outDir": "./build",
+    "rootDir": "./src",
+    "target": "es2017",
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "pretty": true,
+    "plugins": [
+      {
+        "name": "tslint-language-service"
+      },
+      {
+        "transform": "reify-ts/lib/transform",
+        "extractor": {
+          "allOptional": false,
+          "silent": true
+        },
+        "astFileName": "./types.json"
+      }
+    ],
+    "typeRoots": ["./node_modules/@types", "./node_modules"],
+    "types": ["node"],
+    "lib": ["es7", "es2017", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "baseUrl": "."
+  },
+  "exclude": ["./node_modules"],
+  "compileOnSave": true,
+  "watch": true
+}

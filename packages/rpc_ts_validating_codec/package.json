@@ -1,0 +1,55 @@
+{
+  "name": "rpc-ts-validating-codec",
+  "version": "1.0.0",
+  "description": "Payload validation for rpc_ts with runtime type reflection",
+  "repository": "git@github.com:hchauvin/reify-ts.git",
+  "author": "Hadrien Chauvin",
+  "license": "MIT",
+  "private": false,
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "dependencies": {
+    "rpc_ts": "^1.2.0",
+    "ts-node": "^4",
+    "reify-ts": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/express": "^4.11.1",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.47",
+    "chai": "3.5.0",
+    "mocha": "^4",
+    "prettier": "^1.13.7",
+    "shelljs": "^0.8.3",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.13.0",
+    "tslint-config-standard": "^7.0.0",
+    "tslint-language-service": "^0.9.8",
+    "tslint-no-circular-imports": "^0.6.1"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "ts": "tsc -p tsconfig.json --declaration --module commonjs",
+    "lint": "tslint -p tsconfig.json",
+    "format": "prettier --write --ignore-path .gitignore '**/*.ts'",
+    "format:check": "prettier -l --list-different --ignore-path .gitignore '**/*.ts'",
+    "test": "mocha --exit -r ts-node/register '**/*.{test,it}.ts'",
+    "all": "yarn clean && yarn format:check && yarn lint && yarn ts",
+    "precommit": "lint-staged",
+    "doc": "echo 'SKIPPED'"
+  },
+  "lint-staged": {
+    "{./*,typescript/**/*}.{js,jsx,ts,tsx,css,scss,md,json}": "prettier -l",
+    "*.{ts,tsx}": "tslint -c tslint.json"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "typescript",
+    "reflection",
+    "reification",
+    "type erasure",
+    "API",
+    "I/O boundary"
+  ]
+}

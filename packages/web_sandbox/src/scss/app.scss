@@ -1,0 +1,158 @@
+/**
+ * @license
+ * Copyright (c) Hadrien Chauvin
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/theme/base16-light.css';
+
+$textColor: #4d4d4d;
+$primaryColor: #115cf1;
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $textColor;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+$borderColor: $textColor;
+
+$panelBorder: 1px solid $borderColor;
+
+.type-script-panels {
+  > .ant-row {
+    border-bottom: $panelBorder;
+
+    &:first-child {
+      border-top: $panelBorder;
+    }
+
+    > .ant-col {
+      border-right: $panelBorder;
+
+      &:first-child {
+        border-left: $panelBorder;
+      }
+    }
+  }
+
+  .ant-card-head {
+    min-height: auto;
+  }
+
+  .ant-card-head-title {
+    padding: 0;
+  }
+}
+
+.app {
+  padding: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  * {
+    color: $textColor;
+  }
+
+  > section {
+    min-height: 200px;
+    padding: 50px 0;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .title {
+    background: $primaryColor;
+
+    * {
+      color: white;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-align: center;
+    }
+
+    h4 {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      position: relative;
+    }
+
+    #github {
+      position: absolute;
+      right: 5rem;
+      top: 0rem;
+      text-decoration: none;
+      width: 60px;
+    }
+  }
+
+  .usps {
+    background: #f3f3f3;
+    padding: 50px 2rem;
+  }
+
+  .copyright {
+    font-size: 80%;
+    text-align: center;
+    color: lighten($textColor, 20%);
+  }
+
+  h1 {
+    font-size: 500%;
+  }
+
+  h2 {
+    font-size: 300%;
+  }
+
+  h3 {
+    font-size: 200%;
+  }
+
+  h4 {
+    font-size: 120%;
+  }
+
+  a {
+    text-decoration: underline;
+    color: inherit;
+  }
+}
+
+.use-cases {
+  .ant-card-body {
+    height: 200px;
+  }
+
+  .ant-card-actions .ant-btn {
+    vertical-align: middle;
+
+    img {
+      width: 20px;
+      margin-right: 5px;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+@import '~antd/dist/antd';

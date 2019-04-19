@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/reify_ts/src/__tests__/test_packages/*"
+  ],
+  "scripts": {
+    "all": "yarn lerna run all --stream"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "lerna": "^3.13.3"
+  },
+  "name": "reify-ts",
+  "author": "Hadrien Chauvin",
+  "description": "Runtime type reflection for TypeScript",
+  "repository": "git@github.com:hchauvin/reify-ts.git"
+}

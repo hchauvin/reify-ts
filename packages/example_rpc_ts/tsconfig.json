@@ -1,0 +1,28 @@
+{
+  "extends": "../tsconfig.examples.base.json",
+  "compilerOptions": {
+    "outDir": "./build",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules",
+      "../../node_modules/@types",
+      "../../node_modules"
+    ],
+    "plugins": [
+      {
+        "name": "tslint-language-service"
+      },
+      {
+        "transform": "reify-ts/lib/transform",
+        "extractor": {
+          "allOptional": false,
+          "silent": true
+        },
+        "astFileName": "./types.json",
+        "visitors": ["rpc-ts-validating-codec/lib/visitor"]
+      }
+    ]
+  }
+}

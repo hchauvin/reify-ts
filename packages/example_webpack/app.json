@@ -1,0 +1,14 @@
+{
+  "name": "webpack",
+  "description": "Example of using reify-ts with webpack",
+  "repository": "git@github.com:hchauvin/reify-ts.git",
+  "keywords": [
+    "node",
+    "typescript",
+    "RPC",
+    "API",
+    "isomorphic",
+    "gRPC-Web",
+    "real-time"
+  ]
+}

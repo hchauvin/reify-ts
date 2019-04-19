@@ -1,0 +1,20 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:latest-browsers
+
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn all && (cd packages/reify_ts && yarn cov:upload)
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - test

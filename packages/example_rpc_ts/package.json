@@ -1,0 +1,31 @@
+{
+  "name": "example-rpc-ts",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Example usage of reify-ts with rpc-ts",
+  "repository": "git@github.com:hchauvin/reify-ts.git",
+  "author": "Hadrien Chauvin",
+  "dependencies": {
+    "reify-ts": "1.0.0",
+    "ts-node": "^4",
+    "typescript": "3.4.1",
+    "ttypescript": "^1.5.6",
+    "rpc_ts": "1.2.0",
+    "rpc-ts-validating-codec": "1.0.0"
+  },
+  "scripts": {
+    "ts": "ttsc -p tsconfig.json",
+    "start": "node build/index.js",
+    "test": "yarn start",
+    "all": "yarn ts && yarn test"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "typescript",
+    "reflection",
+    "reification",
+    "type erasure",
+    "API",
+    "I/O boundary"
+  ]
+}

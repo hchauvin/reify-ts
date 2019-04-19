@@ -1,0 +1,43 @@
+{
+  "extends": [
+    "tslint-config-standard",
+    "tslint-config-prettier",
+    "tslint-no-circular-imports"
+  ],
+  "defaultSeverity": "error",
+  "linterOptions": { "exclude": ["**/node_modules"] },
+  "rules": {
+    "no-angle-bracket-type-assertion": false,
+    "one-variable-per-declaration": false,
+    "prefer-const": true,
+    "no-var-keyword": true,
+    "ter-prefer-arrow-callback": [false],
+    "no-unused-expression": false,
+    "member-ordering": false,
+    "variable-name": false,
+    "no-empty": false,
+    "curly": false,
+    "completed-docs": false,
+    "jsdoc-format": false,
+    "no-floating-promises": false,
+    "no-use-before-declare": false,
+    "no-unused-variable": true,
+    "no-boolean-literal-compare": false,
+    "await-promise": [true, "Bluebird"],
+    "comment-format": true,
+    "no-duplicate-imports": true,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "ban": [
+      true,
+      "eval",
+      ["describe", "only", "Don't focus tests."],
+      ["it", "only", "Don't focus tests."],
+      {
+        "name": ["chai", "assert", "equal"],
+        "message": "Use 'strictEqual' instead."
+      }
+    ],
+    "no-unnecessary-type-assertion": false
+  }
+}

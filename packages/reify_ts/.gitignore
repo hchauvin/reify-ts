@@ -1,0 +1,13 @@
+/node_modules
+/lib
+/es
+/coverage
+/.nyc_output
+/readme_code.ts
+/typedoc
+*.log
+/build
+/doc
+
+/src/__tests__/third_party_exported_types
+/src/__tests__/test_packages

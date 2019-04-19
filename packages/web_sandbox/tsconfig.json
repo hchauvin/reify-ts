@@ -1,0 +1,35 @@
+{
+  "version": "3.2.2",
+  "compilerOptions": {
+    "jsx": "react",
+    "outDir": "./build",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules",
+      "../../node_modules/@types",
+      "../../node_modules"
+    ],
+    "plugins": [
+      {
+        "name": "tslint-language-service"
+      }
+    ],
+    "target": "es2017",
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "pretty": true,
+    "types": ["node"],
+    "lib": ["es7", "es2017", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true
+  }
+}

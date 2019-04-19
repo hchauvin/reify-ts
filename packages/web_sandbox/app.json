@@ -1,0 +1,13 @@
+{
+  "name": "web-sandbox",
+  "description": "Web sandbox to try out reify-ts",
+  "repository": "https://github.com/hchauvin/reify-ts",
+  "keywords": [
+    "typescript",
+    "reflection",
+    "reification",
+    "type erasure",
+    "API",
+    "I/O boundary"
+  ]
+}

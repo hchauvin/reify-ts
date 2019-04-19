@@ -1,0 +1,33 @@
+{
+  "name": "example-fast-check",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Example usage of reify-ts for fast-checking APIs",
+  "repository": "git@github.com:hchauvin/reify-ts.git",
+  "author": "Hadrien Chauvin",
+  "dependencies": {
+    "reify-ts": "1.0.0",
+    "date-fns": "^1.30.1",
+    "ts-node": "^4",
+    "ttypescript": "^1.5.6",
+    "typescript": "3.4.1"
+  },
+  "scripts": {
+    "ts": "ttsc -p tsconfig.json",
+    "start": "node build/index.js",
+    "test": "ava build/**/*.{test,it}.js",
+    "all": "yarn ts && yarn test"
+  },
+  "devDependencies": {
+    "ava": "^1.4.1"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "typescript",
+    "reflection",
+    "reification",
+    "type erasure",
+    "API",
+    "I/O boundary"
+  ]
+}
