@@ -9,7 +9,6 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
 import * as TerserPlugin from 'terser-webpack-plugin';
-import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 export default baseWebpackConfig({
   webAppRoot: path.resolve(__dirname, '../build/client'),
@@ -99,11 +98,6 @@ function baseWebpackConfig(
     resolve: {
       alias: options.alias,
       extensions: ['.js', '.tsx', '.ts', '.scss'],
-      plugins: [
-        new TsconfigPathsPlugin({
-          configFile: 'tsconfig.json',
-        }),
-      ],
     },
 
     devtool: 'cheap-module-source-map', // https://reactjs.org/docs/cross-origin-errors.html

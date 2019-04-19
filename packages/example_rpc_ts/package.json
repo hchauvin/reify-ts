@@ -6,10 +6,10 @@
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",
   "dependencies": {
+    "express": "^4.16.4",
     "reify-ts": "^1.0.4",
     "rpc-ts-validating-codec": "^1.0.4",
     "rpc_ts": "1.2.0",
-    "ts-node": "^4",
     "ttypescript": "^1.5.6",
     "typescript": "3.4.1"
   },
