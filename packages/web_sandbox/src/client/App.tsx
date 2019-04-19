@@ -83,8 +83,7 @@ function UspsSection() {
             </a>{' '}
             that uses the TypeScript transformer API. reify-ts <i>visitors</i>{' '}
             indicate the reify-ts <i>engine</i> where the types are to be found,
-            and reify-ts
-            <i>consumers</i> access these types at runtime.
+            and reify-ts <i>consumers</i> access these types at runtime.
           </p>
         </Col>
         <Col span={8}>
