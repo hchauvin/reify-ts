@@ -1,6 +1,6 @@
 {
   "name": "example-webpack",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Example usage of reify-ts with webpack",
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",
@@ -22,7 +22,7 @@
     "query-string": "^6.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.3",
-    "reify-ts": "^1.0.2",
+    "reify-ts": "^1.0.3",
     "ts-node": "^4",
     "tsconfig-paths": "3.7.0",
     "ttypescript": "^1.5.6",

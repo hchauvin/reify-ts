@@ -1,6 +1,6 @@
 {
   "name": "reify-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript runtime type reflection",
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",

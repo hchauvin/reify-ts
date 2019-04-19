@@ -1,6 +1,6 @@
 {
   "name": "rpc-ts-validating-codec",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Payload validation for rpc_ts with runtime type reflection",
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",
@@ -9,7 +9,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "reify-ts": "^1.0.2",
+    "reify-ts": "^1.0.3",
     "rpc_ts": "^1.2.0",
     "ts-node": "^4"
   },
