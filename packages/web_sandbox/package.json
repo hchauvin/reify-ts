@@ -1,6 +1,6 @@
 {
   "name": "web-sandbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web sandbox to try out reify-ts",
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",
@@ -21,7 +21,7 @@
     "react": "^16.8.6",
     "react-codemirror2": "^5.1.0",
     "react-dom": "^16.8.3",
-    "reify-ts": "^1.0.0",
+    "reify-ts": "^1.0.1",
     "tsconfig-paths": "3.7.0",
     "ttypescript": "^1.5.6",
     "typescript": "3.4.1"

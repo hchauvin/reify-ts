@@ -1,13 +1,13 @@
 {
   "name": "example-rpc-ts",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Example usage of reify-ts with rpc-ts",
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",
   "dependencies": {
-    "reify-ts": "^1.0.0",
-    "rpc-ts-validating-codec": "^1.0.0",
+    "reify-ts": "^1.0.1",
+    "rpc-ts-validating-codec": "^1.0.1",
     "rpc_ts": "1.2.0",
     "ts-node": "^4",
     "ttypescript": "^1.5.6",
