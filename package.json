@@ -7,7 +7,7 @@
   "scripts": {
     "all": "yarn lerna run all --stream"
   },
-  "version": "1.0.0",
+  "version": "0.9.9",
   "devDependencies": {
     "lerna": "^3.13.3"
   },

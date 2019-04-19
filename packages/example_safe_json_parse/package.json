@@ -2,13 +2,12 @@
   "name": "example-safe-json-parse",
   "private": true,
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "0.9.9",
   "description": "Example usage of reify-ts",
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",
   "dependencies": {
-    "reify-ts": "1.0.0",
-    "ts-node": "^4",
+    "reify-ts": "0.9.9",
     "typescript": "3.4.1",
     "ttypescript": "^1.5.6"
   },

@@ -1,12 +1,12 @@
 {
   "name": "example-fast-check",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.9.9",
   "description": "Example usage of reify-ts for fast-checking APIs",
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",
   "dependencies": {
-    "reify-ts": "1.0.0",
+    "reify-ts": "0.9.9",
     "date-fns": "^1.30.1",
     "ts-node": "^4",
     "ttypescript": "^1.5.6",
