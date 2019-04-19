@@ -561,7 +561,7 @@ function isCallable(type: ts.Type): boolean {
 /** Try to get a not null or undefined type from a type. */
 function getNotNullOrUndefinedType(type: Type): Type {
   if (type.kind === Kind.optional) {
-    return type.value;
+    type = type.value;
   }
   if (type.kind === Kind.union) {
     const types = type.types.filter(it => {
@@ -575,6 +575,9 @@ function getNotNullOrUndefinedType(type: Type): Type {
     });
     if (types.length === 0) {
       return type;
+    }
+    if (types.length === 1) {
+      return types[0];
     }
     return {
       ...type,
