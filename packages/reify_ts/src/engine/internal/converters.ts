@@ -67,7 +67,7 @@ export const typeFlagsToTypeConverters: {
   [typeFlags: number]: Type | TypeConverter;
 } = {
   // type _ = never;
-  [ts.TypeFlags.Never]: (type, { checker, warning }) => {
+  [ts.TypeFlags.Never]: (type, { checker, warning, parentSymbol }) => {
     // The never type represents the type of values that never occur.
     // It is weird to have this as the type of something that you serialize,
     // deserialize, thus the warning.
@@ -76,16 +76,16 @@ export const typeFlagsToTypeConverters: {
     if (typeStr !== 'never') {
       throw new TypeConversionInvariantError(typeStr, 'not never');
     }
-    return warning(type.getSymbol(), 'neverType');
+    return warning(parentSymbol, 'neverType');
   },
   // type _ = symbol;
-  [ts.TypeFlags.ESSymbolLike]: (type, { warning }) => {
-    return warning(type.getSymbol(), 'symbol');
+  [ts.TypeFlags.ESSymbolLike]: (_type, { warning, parentSymbol }) => {
+    return warning(parentSymbol, 'symbol');
   },
   // type A<T> = T;  (--> type of T)
-  [ts.TypeFlags.TypeVariable]: (type, { warning, checker }) => {
+  [ts.TypeFlags.TypeVariable]: (type, { warning, checker, parentSymbol }) => {
     return warning(
-      type.getSymbol(),
+      parentSymbol,
       'typeVariableErasure',
       type.symbol
         ? type.symbol.getEscapedName().toString()

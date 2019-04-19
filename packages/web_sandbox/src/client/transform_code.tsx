@@ -94,18 +94,10 @@ export function transformCode(
     before: [transformer],
   });
   const diagnostics = [...emitResult.diagnostics, ...transformationDiagnostics];
-  if (diagnostics.length > 0) {
-    return {
-      ast: [],
-      generatedCode: '',
-      console: diagnosticsToString(diagnostics),
-    };
-  }
-
   return {
     ast: extractor.getTypes(),
     generatedCode: compilerHost.outputFiles['index.js'] || '',
-    console: '',
+    console: diagnosticsToString(diagnostics),
   };
 }
 
@@ -236,15 +228,23 @@ function diagnosticsToString(
           '\n',
         );
         if (diagnostic.file === undefined || diagnostic.start === undefined) {
-          return message;
+          return `* ${diagnosticCategoryStr[diagnostic.category]}: ${message}`;
         }
         const {
           line,
           character,
         } = diagnostic.file.getLineAndCharacterOfPosition(diagnostic.start);
-        return `* ${diagnostic.file.fileName}:${line + 1}:${character +
-          1}: ${message}`;
+        return `* ${diagnosticCategoryStr[diagnostic.category]}: ${
+          diagnostic.file.fileName
+        }:${line + 1}:${character + 1}: ${message}`;
       })
       .join('\n') || '<no diagnostic message>'
   );
 }
+
+const diagnosticCategoryStr: { [category in ts.DiagnosticCategory]: string } = {
+  [ts.DiagnosticCategory.Warning]: 'Warning',
+  [ts.DiagnosticCategory.Error]: 'Error',
+  [ts.DiagnosticCategory.Suggestion]: 'Suggestion',
+  [ts.DiagnosticCategory.Message]: 'Message',
+};
