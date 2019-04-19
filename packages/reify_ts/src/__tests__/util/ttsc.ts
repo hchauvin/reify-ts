@@ -15,6 +15,8 @@
 import { TestPackage, TestPackageOptions } from './test_package';
 import { ChildProcess } from 'child_process';
 import { promisify } from 'util';
+import * as fs from 'fs';
+import * as path from 'path';
 import * as terminate from 'terminate';
 import { ExecutionContext } from 'ava';
 import { TypeExtractorOptions } from '../../engine/types';
@@ -40,12 +42,18 @@ export class TsTestPackage extends TestPackage<TsTestPackageOptions> {
   async setup() {
     await super.setup();
 
+    const packageJson = JSON.parse(
+      fs.readFileSync(path.resolve(__dirname, '../../../package.json'), {
+        encoding: 'utf8',
+      }),
+    );
+
     await this.writeJson('package.json', {
       name: this.options.name,
       private: true,
-      version: '1.0.0',
+      version: packageJson.version,
       dependencies: {
-        'reify-ts': '1.0.0',
+        'reify-ts': packageJson.version,
         'ts-node': '^4',
         typescript: '3.4.1',
         ttypescript: '^1.5.6',
