@@ -3,6 +3,5 @@
 /tsconfig.json
 /tslint.json
 /typedoc
-/docs
 /.nyc_output
 /coverage
