@@ -1,5 +1,7 @@
 # reify-ts: Runtime type reflection for TypeScript
 
+[![CircleCI](https://circleci.com/gh/hchauvin/reify-ts/tree/master.svg?style=svg)](https://circleci.com/gh/hchauvin/reify-ts/tree/master) [![Coverage Status](https://coveralls.io/repos/github/hchauvin/reify-ts/badge.svg?branch=master)](https://coveralls.io/github/hchauvin/reify-ts?branch=master) [![npm version](https://badge.fury.io/js/reify-ts.svg)](https://badge.fury.io/js/reify-ts) [![typescript](./docs/typescript.svg)](https://aleen42.github.io/badges/src/typescript.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 reify-ts plugs into the TypeScript compiler and generates type reflection on the flight. Type reflection can be used to validate API payloads and to generate random values for [hypothesis testing / quick checking](https://en.wikipedia.org/wiki/QuickCheck).
 
 You can try reify-ts in the browser [here](https://hchauvin.github.io/reify-ts).

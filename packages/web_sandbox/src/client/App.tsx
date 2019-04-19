@@ -25,7 +25,7 @@ function TitleSection() {
           id="github"
           title="View on  GitHub"
         >
-          <img src="/github_reverse.svg" />
+          <img src="github_reverse.svg" />
         </a>
       </h1>
       <h2>Runtime type reflection for TypeScript</h2>
@@ -132,7 +132,7 @@ function UseCasesSection() {
                 href="https://github.com/hchauvin/reify-ts/tree/master/packages/example_safe_json_parse"
                 target="_blank"
               >
-                <img src="/github.svg" />
+                <img src="github.svg" />
                 <span>View on GitHub</span>
               </Button>,
             ]}
@@ -151,7 +151,7 @@ function UseCasesSection() {
                 href="https://github.com/hchauvin/reify-ts/tree/master/packages/example_fast_check"
                 target="_blank"
               >
-                <img src="/github.svg" />
+                <img src="github.svg" />
                 <span>View on GitHub</span>
               </Button>,
             ]}
@@ -169,7 +169,7 @@ function UseCasesSection() {
                 href="https://github.com/hchauvin/reify-ts/tree/master/packages/example_webpack"
                 target="_blank"
               >
-                <img src="/github.svg" />
+                <img src="github.svg" />
                 <span>View on GitHub</span>
               </Button>,
             ]}
@@ -185,7 +185,7 @@ function UseCasesSection() {
                 href="https://github.com/hchauvin/reify-ts/tree/master/packages/example_rpc_ts"
                 target="_blank"
               >
-                <img src="/github.svg" />
+                <img src="github.svg" />
                 <span>View on GitHub</span>
               </Button>,
             ]}
