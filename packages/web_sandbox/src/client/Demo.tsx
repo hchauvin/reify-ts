@@ -44,7 +44,7 @@ export function Demo() {
         onChangeVisitorMap={onChangeVisitorMap}
       />
       <Row>
-        <Col span={12}>
+        <Col lg={12} sm={24}>
           <Code
             title="TypeScript (index.ts)"
             mode={{ name: 'javascript', typescript: true }}
@@ -52,7 +52,7 @@ export function Demo() {
             onChange={onTypeScriptChange}
           />
         </Col>
-        <Col span={12}>
+        <Col lg={12} sm={24}>
           <Code
             title="AST"
             value={JSON.stringify(ast, null, 2)}
@@ -61,14 +61,14 @@ export function Demo() {
         </Col>
       </Row>
       <Row>
-        <Col span={12}>
+        <Col lg={12} sm={24}>
           <Code
             title="Generated code"
             value={generatedCode}
             mode={{ name: 'javascript', typescript: true }}
           />
         </Col>
-        <Col span={12}>
+        <Col lg={12} sm={24}>
           <Code title="Console" value={console} />
         </Col>
       </Row>
@@ -84,7 +84,7 @@ function Configuration(props: {
 }) {
   return (
     <Row>
-      <Col span={12} style={{ padding: '5px', height: '80px' }}>
+      <Col lg={12} sm={24} style={{ padding: '5px', height: '80px' }}>
         <h4>Preset</h4>
         <Select style={{ width: '100%' }} onChange={props.onChangeExampleCode}>
           {Object.keys(exampleCode).map(it => (
@@ -92,7 +92,7 @@ function Configuration(props: {
           ))}
         </Select>
       </Col>
-      <Col span={12} style={{ padding: '5px', height: '80px' }}>
+      <Col lg={12} sm={24} style={{ padding: '5px', height: '80px' }}>
         <h4>Visitors</h4>
         <Checkbox
           checked={!!props.visitorMap[VisitorClassName.allTypes]}
@@ -194,12 +194,12 @@ function Consumers(props: { ast: TypeEntry[] }) {
   return (
     <>
       <Row>
-        <Col span={24} style={{ padding: '5px' }}>
+        <Col lg={24} sm={24} style={{ padding: '5px' }}>
           <h2 style={{ margin: '0.5em 0', fontSize: '21px' }}>Consumers</h2>
         </Col>
       </Row>
       <Row>
-        <Col span={12} style={{ padding: '5px' }}>
+        <Col lg={12} sm={24} style={{ padding: '5px' }}>
           <h4>Type</h4>
           <Select
             style={{ width: '100%' }}
@@ -213,14 +213,14 @@ function Consumers(props: { ast: TypeEntry[] }) {
         </Col>
       </Row>
       <Row>
-        <Col span={8}>
+        <Col lg={8} sm={24}>
           <Code
             title="Sample values"
             mode={{ name: 'javascript', json: true }}
             value={JSON.stringify(sampleValues, null, 2)}
           />
         </Col>
-        <Col span={8}>
+        <Col lg={8} sm={24}>
           <Code
             title="Value to check"
             mode={{ name: 'javascript', json: true }}
@@ -228,7 +228,7 @@ function Consumers(props: { ast: TypeEntry[] }) {
             onChange={setValueToCheck}
           />
         </Col>
-        <Col span={8}>
+        <Col lg={8} sm={24}>
           <Code
             title="Console"
             value={[sampleValuesConsole, validationConsole]

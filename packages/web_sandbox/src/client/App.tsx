@@ -46,7 +46,7 @@ function UspsSection() {
   return (
     <section className="usps">
       <Row gutter={24}>
-        <Col span={8}>
+        <Col sm={12} lg={8} xs={24}>
           <h3>TypeScript-native</h3>
           <p>
             Validate your payloads using TypeScript types. No need for{' '}
@@ -74,7 +74,7 @@ function UspsSection() {
             that come with their own type systems.
           </p>
         </Col>
-        <Col span={8}>
+        <Col sm={12} lg={8} xs={24}>
           <h3>A modular architecture</h3>
           <p>
             reify-ts plugs into a{' '}
@@ -86,7 +86,7 @@ function UspsSection() {
             and reify-ts <i>consumers</i> access these types at runtime.
           </p>
         </Col>
-        <Col span={8}>
+        <Col sm={12} lg={8} xs={24}>
           <h3>Based on proven technologies</h3>
           <p>
             The reify-ts consumers are based on{' '}
@@ -119,7 +119,7 @@ function UseCasesSection() {
     <section className="use-cases">
       <h2>Use cases</h2>
       <Row gutter={24}>
-        <Col span={6}>
+        <Col lg={6} sm={24}>
           <Card
             title={
               <div>
@@ -142,7 +142,7 @@ function UseCasesSection() {
             TypeScript.
           </Card>
         </Col>
-        <Col span={6}>
+        <Col lg={6} sm={24}>
           <Card
             title="API QuickCheck"
             actions={[
@@ -160,7 +160,7 @@ function UseCasesSection() {
             &ldquo;foo-bar&rdquo; tests.
           </Card>
         </Col>
-        <Col span={6}>
+        <Col lg={6} sm={24}>
           <Card
             title="Frontend use"
             actions={[
@@ -176,7 +176,7 @@ function UseCasesSection() {
             reify-ts can be used in the browser.
           </Card>
         </Col>
-        <Col span={6}>
+        <Col lg={6} sm={24}>
           <Card
             title={<div>rpc_ts validating codec</div>}
             actions={[

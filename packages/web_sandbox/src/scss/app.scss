@@ -12,6 +12,10 @@
 $textColor: #4d4d4d;
 $primaryColor: #115cf1;
 
+$smBreakpoint: 992px;
+$padding: 2rem;
+$smPadding: 1rem;
+
 body {
   margin: 0;
   padding: 0;
@@ -34,7 +38,13 @@ $panelBorder: 1px solid $borderColor;
     > .ant-col {
       border-right: $panelBorder;
 
-      &:first-child {
+      @media all and (min-width: $smBreakpoint) {
+        &:first-child {
+          border-left: $panelBorder;
+        }
+      }
+
+      @media all and (max-width: $smBreakpoint) {
         border-left: $panelBorder;
       }
     }
@@ -50,9 +60,13 @@ $panelBorder: 1px solid $borderColor;
 }
 
 .app {
-  padding: 2rem;
+  padding: $padding;
   max-width: 1300px;
   margin: 0 auto;
+
+  @media all and (max-width: $smBreakpoint) {
+    padding: $smPadding;
+  }
 
   * {
     color: $textColor;
@@ -60,7 +74,11 @@ $panelBorder: 1px solid $borderColor;
 
   > section {
     min-height: 200px;
-    padding: 50px 0;
+    padding: $padding 0;
+
+    @media all and (max-width: $smBreakpoint) {
+      padding: $smPadding 0;
+    }
   }
 
   h1,
@@ -70,6 +88,11 @@ $panelBorder: 1px solid $borderColor;
 
   .title {
     background: $primaryColor;
+    padding: $padding;
+
+    @media all and (max-width: $smBreakpoint) {
+      padding: $smPadding;
+    }
 
     * {
       color: white;
@@ -96,13 +119,28 @@ $panelBorder: 1px solid $borderColor;
       right: 5rem;
       top: 0rem;
       text-decoration: none;
-      width: 60px;
+
+      img {
+        width: 60px;
+      }
+    }
+
+    @media all and (max-width: $smBreakpoint) {
+      #github {
+        position: unset;
+        display: block;
+        width: 100%;
+      }
     }
   }
 
   .usps {
     background: #f3f3f3;
-    padding: 50px 2rem;
+    padding: $padding;
+
+    @media all and (max-width: $smBreakpoint) {
+      padding: $smPadding;
+    }
   }
 
   .copyright {
@@ -152,6 +190,10 @@ $panelBorder: 1px solid $borderColor;
       display: inline-block;
       vertical-align: middle;
     }
+  }
+
+  .ant-col {
+    margin-bottom: 18px;
   }
 }
 
