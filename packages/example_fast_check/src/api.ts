@@ -8,10 +8,10 @@
 
 import { decode, encode } from 'reify-ts/lib/consumers/validator';
 import { getValidator } from './validator';
-import { ApiLimit } from './brands/api_limit';
 import { DateString } from './brands';
 import fc from 'fast-check';
 import { addDays } from 'date-fns';
+import { ApiLimit2 } from './brands/api_limit2';
 
 /** An API handler sitting at an I/O boundary */
 export function exampleApi(requestAny: any): any {
@@ -25,7 +25,7 @@ export function exampleApi(requestAny: any): any {
 
 export type ExampleRequest = {
   after: DateString;
-  limit: ApiLimit;
+  limit: ApiLimit2<10>;
 };
 
 export type ExampleResponse = {
