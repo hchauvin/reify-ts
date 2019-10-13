@@ -10,6 +10,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as express from 'express';
 import * as http from 'http';
+import { NodeHttpTransport } from '@improbable-eng/grpc-web-node-http-transport';
 import { ModuleRpcCommon } from 'rpc_ts/lib/common';
 import { ModuleRpcServer } from 'rpc_ts/lib/server';
 import { ModuleRpcProtocolGrpcWebServer } from 'rpc_ts/lib/protocol/grpc_web/server';
@@ -94,6 +95,7 @@ async function main() {
       helloServiceDefinition,
       {
         remoteAddress,
+        getGrpcWebTransport: NodeHttpTransport(),
       },
     ).getHello({ language: 'Spanish' });
     if (text !== 'Hola') {
@@ -104,6 +106,7 @@ async function main() {
     try {
       await ModuleRpcProtocolClient.getRpcClient(helloServiceDefinition, {
         remoteAddress,
+        getGrpcWebTransport: NodeHttpTransport(),
       }).getHello({ foo: 'bar' } as any);
       throw new Error('expected an invalidArgument error');
     } catch (err) {
