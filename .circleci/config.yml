@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 defaults: &defaults
   working_directory: ~/repo
@@ -41,7 +41,6 @@ jobs:
       - run: (cd packages/reify_ts && yarn cov && yarn cov:upload)
 
 workflows:
-  version: 2
   test-deploy:
     jobs:
       - test_3_4_1
