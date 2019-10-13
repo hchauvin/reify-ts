@@ -21,6 +21,7 @@ import { TypeMirror } from '../runtime/type_mirror';
 import { assertUnreachable, tuple } from '../internal/utils';
 import { checkPassThrough } from '../runtime/pass_through';
 import { UnregisteredBrandError, AlreadyRegisteredBrandError } from './errors';
+import { isLeft } from 'fp-ts/lib/Either';
 
 /**
  * Placeholder to decode a payload and validate its shape against the type
@@ -84,10 +85,10 @@ export class Validator {
   /** Decodes a payload and validates it against the given type name. */
   decode(typeName: string, payload: any): any {
     const validation = this.getValidator(typeName).decode(payload);
-    if (validation.isLeft()) {
+    if (isLeft(validation)) {
       throw new ValidationError(validation);
     }
-    return validation.value;
+    return validation.right;
   }
 
   /** Encodes a payload according to a given type name. */
