@@ -12,7 +12,7 @@ import { ModuleRpcCommon } from 'rpc_ts/lib/common';
 import { ModuleRpcServer } from 'rpc_ts/lib/server';
 import { checkPassThrough } from 'reify-ts/lib/runtime/pass_through';
 import { Validator } from 'reify-ts/lib/consumers/validator';
-import { grpc } from 'grpc-web-client';
+import { grpc } from '@improbable-eng/grpc-web';
 import { Kind, TypeEntry } from 'reify-ts/lib/types';
 import { BaseError } from 'make-error';
 import { PathReporter } from 'io-ts/lib/PathReporter';
