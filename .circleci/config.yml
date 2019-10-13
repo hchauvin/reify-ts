@@ -26,12 +26,6 @@ jobs:
       - test:
           typescript_version: "3.4.1"
 
-  test_3_5_1:
-    <<: *defaults
-    steps:
-      - test:
-          typescript_version: "3.5.1"
-
   test:
     <<: *defaults
     steps:
