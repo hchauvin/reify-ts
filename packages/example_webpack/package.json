@@ -12,8 +12,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.3",
     "reify-ts": "^1.0.4",
-    "ttypescript": "^1.5.6",
-    "typescript": "3.4.1"
+    "ttypescript": "^1.5.6"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.0.0",
@@ -44,6 +43,7 @@
     "tslint-config-standard": "^7.0.0",
     "tslint-language-service": "^0.9.8",
     "tslint-no-circular-imports": "^0.6.1",
+    "typescript": "3.4.1",
     "url-loader": "^1.0.1",
     "webpack": "^4.4.1",
     "webpack-cli": "^3.1.0",

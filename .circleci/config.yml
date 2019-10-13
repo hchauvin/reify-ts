@@ -1,21 +1,41 @@
-version: 2
+version: 2.1
 
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:latest-browsers
+    - image: circleci/node:10.16.3-browsers
+
+commands:
+  test:
+    description: Test workflow.
+    parameters:
+      typescript_version:
+        default: "3.6.4"
+        description: TypeScript version to use
+        type: string
+    steps:
+      - checkout
+      - run: yarn --frozen-lockfile
+      - run: yarn update-dep typescript@<< parameters.typescript_version >>
+      - run: yarn all
 
 jobs:
+  test_3_4_1:
+    <<: *defaults
+    steps:
+      - test:
+          typescript_version: "3.4.1"
+
   test:
     <<: *defaults
     steps:
       - checkout
-      - run: yarn
+      - run: yarn --frozen-lockfile
       - run: yarn all
       - run: (cd packages/reify_ts && yarn cov && yarn cov:upload)
 
 workflows:
-  version: 2
   test-deploy:
     jobs:
+      - test_3_4_1
       - test

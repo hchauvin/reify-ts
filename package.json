@@ -5,7 +5,8 @@
     "packages/reify_ts/src/__tests__/test_packages/*"
   ],
   "scripts": {
-    "all": "yarn lerna run all --stream"
+    "all": "yarn lerna run all --stream",
+    "update-dep": "yarn lerna add -D"
   },
   "version": "0.9.9",
   "devDependencies": {
