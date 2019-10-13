@@ -9,7 +9,7 @@
     "express": "^4.16.4",
     "reify-ts": "^1.0.4",
     "rpc-ts-validating-codec": "^1.0.4",
-    "rpc_ts": "1.2.0",
+    "rpc_ts": "2.1.0",
     "ttypescript": "^1.5.6"
   },
   "devDependencies": {
