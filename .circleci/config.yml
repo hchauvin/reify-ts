@@ -38,5 +38,4 @@ workflows:
   test-deploy:
     jobs:
       - test_3_4_1
-      - test_3_5_1
       - test
