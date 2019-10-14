@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "ava": "^1.4.1",
-    "typescript": "3.5.1"
+    "typescript": "3.6.4"
   },
   "sideEffects": false,
   "keywords": [
