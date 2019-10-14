@@ -41,7 +41,9 @@ jobs:
           types_node_version: "8.0.47"
 
   test:
-    <<: *defaults
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:latest-browsers
     steps:
       - checkout
       - run: yarn --frozen-lockfile

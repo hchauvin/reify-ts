@@ -18,7 +18,7 @@
     "@babel/polyfill": "^7.0.0",
     "@types/lodash": "^4.14.106",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^10.14.21",
+    "@types/node": "^12.7.12",
     "@types/path-is-inside": "^1.0.0",
     "@types/puppeteer": "^1.5.1",
     "@types/query-string": "^5.1.0",
