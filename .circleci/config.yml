@@ -17,6 +17,7 @@ commands:
       - checkout
       - run: yarn --frozen-lockfile
       - run: yarn update-dep typescript@<< parameters.typescript_version >>
+      - run: sed -i -E "s/TYPESCRIPT_VERSION = '[^']+'/TYPESCRIPT_VERSION = '<< parameters.typescript_version >>'/" packages/reify_ts/src/__tests__/util/ttsc.ts
       - run: yarn all
 
 jobs:
