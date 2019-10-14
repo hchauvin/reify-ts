@@ -14,7 +14,7 @@ However, the TypeScript team has been very clear that type erasure and minimal r
 
 ## Compatibility
 
-reify-ts has been extensively checked against **TypeScript 3.4.1.**
+reify-ts has been extensively checked against **TypeScript 3.4.1, 3.5.1, and 3.6.4.**
 
 ## License
 
