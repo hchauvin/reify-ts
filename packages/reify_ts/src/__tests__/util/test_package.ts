@@ -90,8 +90,8 @@ export class TestPackage<
   async yarn(
     command: string[] = [],
     { mustSucceed = true, verbose = false } = {},
-  ): Promise<{ stdout: string; stderr: string; exitCode: number }> {
-    return new Promise<{ stdout: string; stderr: string; exitCode: number }>(
+  ): Promise<{ stdout: string; stderr: string; exitCode: number | null }> {
+    return new Promise<{ stdout: string; stderr: string; exitCode: number | null }>(
       (resolve, reject) => {
         let stdout: string = '';
         let stderr: string = '';
