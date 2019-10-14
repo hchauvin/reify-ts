@@ -24,6 +24,12 @@ import { ExternalResource } from './external_resource';
 import { ProgramTransformationResultWrapper } from './type_util';
 
 /**
+ * The version of TypeScript to use.  If you update this line, please
+ * update the build matrix in `.circleci/config.yml`.
+ */
+const TYPESCRIPT_VERSION = '3.5.1';
+
+/**
  * The constant file name where the type ASTs are stored after the
  * reify-ts ts_plugin plugin has been applied.
  */
@@ -55,8 +61,8 @@ export class TsTestPackage extends TestPackage<TsTestPackageOptions> {
       dependencies: {
         'reify-ts': packageJson.version,
         'ts-node': '^4',
-        typescript: '3.4.1',
-        ttypescript: '^1.5.6',
+        typescript: TYPESCRIPT_VERSION,
+        ttypescript: '^1.5.7',
       },
     });
 

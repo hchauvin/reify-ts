@@ -45,13 +45,15 @@
     "tslint-config-standard": "^7.0.0",
     "tslint-language-service": "^0.9.8",
     "tslint-no-circular-imports": "^0.6.1",
-    "ttypescript": "^1.5.6",
+    "ttypescript": "^1.5.7",
     "type-zoo": "^3.3.0",
     "typedoc": "^0.14.2",
     "typedoc-plugin-external-module-name": "^2.0.0",
     "typelevel-ts": "^0.3.5",
-    "typescript": "3.4.1",
     "vue": "^2.6.10"
+  },
+  "peerDependencies": {
+    "typescript": ">= 3.4.1"
   },
   "scripts": {
     "clean": "rimraf lib dist es typedoc",
