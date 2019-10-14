@@ -100,11 +100,10 @@ export class TypeExtractor {
     checker: ts.TypeChecker,
     parentSymbol: ts.Symbol | undefined,
   ): Type {
-    if (typeToString(type, checker).includes('globalThis = typeof globalThis')) {
-      return this.warning(
-        type.getSymbol() || parentSymbol,
-        'globalThis',
-      );
+    if (
+      typeToString(type, checker).includes('globalThis = typeof globalThis')
+    ) {
+      return this.warning(type.getSymbol() || parentSymbol, 'globalThis');
     }
 
     if (type.flags & ts.TypeFlags.TypeVariable && !name) {
