@@ -14,12 +14,15 @@ test('intersection', t => {
   transformUnitTestProgram(t, 'intersection').assertTypesEqual({
     Intersection: {
       kind: Kind.intersection,
-      types: [STRING, {
-        kind: Kind.record,
-        fields: {
-          a: { type: STRING },
-        }
-      }],
+      types: [
+        STRING,
+        {
+          kind: Kind.record,
+          fields: {
+            a: { type: STRING },
+          },
+        },
+      ],
     },
   });
   // Cannot fast-check as the intersection is not inhabited.
