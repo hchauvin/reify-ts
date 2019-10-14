@@ -14,7 +14,7 @@
     "ttypescript": "^1.5.7"
   },
   "devDependencies": {
-    "typescript": "3.5.1"
+    "typescript": "3.6.2"
   },
   "scripts": {
     "ts": "ttsc -p tsconfig.json",
