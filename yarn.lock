@@ -4782,7 +4782,7 @@ forwarded@~0.1.2:
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
 
-fp-ts@^1.0.0, fp-ts@^1.11.0:
+fp-ts@^1.0.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-1.13.0.tgz#004803434e6c92021232746a621d3c2429c3d5cc"
   integrity sha512-QDPtCkuLay+dX3zinnvt0ER+j8mdWZZSpM//DIY3GycgwUTDPBKFD7CxX5DU/mIDstcWqGuuUSrMNtB6MWluCQ==
@@ -7188,13 +7188,6 @@ moment@^2.14.1:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
 
-monocle-ts@^1.0.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/monocle-ts/-/monocle-ts-1.6.0.tgz#84840ef81b79633ef4d34b94127a2fb489f8c3e9"
-  integrity sha512-OLnNKLCHiwojzIpsQ6L90vS4GOp/fX4r1WEoTv6w4udpVpDJHsDGT9MSaellEhnqa+ZC5Z1Xbr4ksB8teMosDw==
-  dependencies:
-    fp-ts "^1.11.0"
-
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -7311,13 +7304,10 @@ nested-error-stacks@^2.0.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-newtype-ts@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/newtype-ts/-/newtype-ts-0.2.4.tgz#a02a8f160a3d179f871848d687a93de73a964a41"
-  integrity sha512-HrzPdG0+0FK1qHbc3ld/HXu252OYgmN993bFxUtZ6NFCLUk1eq+yKwdvP07BblXQibGqMWNXBUrNoLUq23Ma2Q==
-  dependencies:
-    fp-ts "^1.0.0"
-    monocle-ts "^1.0.0"
+newtype-ts@^0.3.0:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/newtype-ts/-/newtype-ts-0.3.2.tgz#a25db880f9c601b4ea8fc61658ffa399d60f62e2"
+  integrity sha512-1F5ff8LdXtMgcuy+t2F0q6b8VCt26YiXCw/YCSLacBBGH5N+fkFzNoRzvvP6JAjmFCb1Zcfyn0ZyJOCJIpTkKQ==
 
 nice-try@^1.0.4:
   version "1.0.5"
