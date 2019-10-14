@@ -27,7 +27,7 @@ import { TypeMirror } from '../../runtime/type_mirror';
 export class ProgramTransformationResultWrapper {
   constructor(
     private readonly result: ProgramTransformationResult,
-    private t: ExecutionContext<{}>,
+    private t: ExecutionContext<unknown>,
   ) {}
 
   get entries(): TypeEntry[] {

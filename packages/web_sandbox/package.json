@@ -53,13 +53,16 @@
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write --ignore-path .gitignore '**/*.ts'",
     "format:check": "prettier -l --list-different --ignore-path .gitignore '**/*.ts'",
-    "test": "ava build/**/__tests__/*.{test,it}.js",
+    "test": "ava",
     "all": "yarn clean && yarn format:check && yarn lint && yarn ts && yarn web:build",
     "precommit": "lint-staged",
     "web": "webpack-dev-server --config webpack.config",
     "web:build": "webpack-cli -p --config webpack.config",
     "web:deploy": "yarn gh-pages -d src/client/public -m '[ci skip] Updates'",
     "doc": "echo 'SKIPPED'"
+  },
+  "ava": {
+    "files": ["build/**/__tests__/*.{test,it}.js"]
   },
   "lint-staged": {
     "{./*,typescript/**/*}.{js,jsx,ts,tsx,css,scss,md,json}": "prettier -l",

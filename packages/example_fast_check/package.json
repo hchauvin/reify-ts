@@ -15,8 +15,11 @@
   "scripts": {
     "ts": "ttsc -p tsconfig.json",
     "start": "node build/index.js",
-    "test": "ava build/**/*.{test,it}.js",
+    "test": "ava",
     "all": "yarn ts && yarn test"
+  },
+  "ava": {
+    "files": ["build/**/*.{test,it}.js"]
   },
   "devDependencies": {
     "ava": "^2.4.0",

@@ -110,7 +110,7 @@ export class TsTestPackage extends TestPackage<TsTestPackageOptions> {
 
   /** Gets the type ASTs that are gathered by ts_plugin. */
   async getProgramTransformationResult(
-    t: ExecutionContext<{}>,
+    t: ExecutionContext<unknown>,
   ): Promise<ProgramTransformationResultWrapper> {
     return new ProgramTransformationResultWrapper(
       {

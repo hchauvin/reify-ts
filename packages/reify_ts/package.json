@@ -58,8 +58,8 @@
   },
   "scripts": {
     "clean": "rimraf lib dist es typedoc",
-    "test": "ava 'lib/**/__tests__/*.{test,it}.js' --verbose --concurrency=20",
-    "cov": "yarn nyc --reporter=html --reporter=text ava 'lib/**/__tests__/*.{test,it}.js' --verbose --concurrency=20",
+    "test": "ava --verbose --concurrency=20",
+    "cov": "yarn nyc --reporter=html --reporter=text ava --verbose --concurrency=20",
     "cov:upload": "yarn nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls",
     "perf": "node lib/benchmark",
     "build:es": "tsc -p tsconfig.json --declaration --module esnext --outDir ./es",
@@ -71,6 +71,9 @@
     "all": "yarn clean && yarn build && yarn format:check && yarn lint && yarn test",
     "precommit": "lint-staged",
     "doc": "typedoc --options typedoc.js src"
+  },
+  "ava": {
+    "files": ["lib/**/__tests__/*.{test,it}.js"]
   },
   "lint-staged": {
     "{./*,typescript/**/*}.{js,jsx,ts,tsx,css,scss,md,json}": "prettier -l",
