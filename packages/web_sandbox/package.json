@@ -40,7 +40,7 @@
     "tslint-config-prettier": "^1.13.0",
     "tslint-config-standard": "^7.0.0",
     "tslint-language-service": "^0.9.8",
-    "tslint-no-circular-imports": "^0.6.1",
+    "tslint-no-circular-imports": "^0.7.0",
     "typescript": "3.6.4",
     "url-loader": "^1.0.1",
     "webpack": "^4.4.1",
