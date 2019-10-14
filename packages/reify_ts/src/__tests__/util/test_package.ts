@@ -91,37 +91,39 @@ export class TestPackage<
     command: string[] = [],
     { mustSucceed = true, verbose = false } = {},
   ): Promise<{ stdout: string; stderr: string; exitCode: number | null }> {
-    return new Promise<{ stdout: string; stderr: string; exitCode: number | null }>(
-      (resolve, reject) => {
-        let stdout: string = '';
-        let stderr: string = '';
+    return new Promise<{
+      stdout: string;
+      stderr: string;
+      exitCode: number | null;
+    }>((resolve, reject) => {
+      let stdout: string = '';
+      let stderr: string = '';
 
-        const proc = this.spawnYarn(command);
-        proc.on('exit', (exitCode, signal) => {
-          const reason = `yarn exited with code ${exitCode} and signal ${signal}; STDOUT: <<<\n${stdout}\n>>>; STDERR: <<<\n${stderr}\n>>>`;
-          if (verbose) {
-            console.log(reason);
-          }
-          if (mustSucceed && exitCode !== 0) {
-            reject(new Error(reason));
-          }
-          resolve({ stdout, stderr, exitCode });
-        });
+      const proc = this.spawnYarn(command);
+      proc.on('exit', (exitCode, signal) => {
+        const reason = `yarn exited with code ${exitCode} and signal ${signal}; STDOUT: <<<\n${stdout}\n>>>; STDERR: <<<\n${stderr}\n>>>`;
+        if (verbose) {
+          console.log(reason);
+        }
+        if (mustSucceed && exitCode !== 0) {
+          reject(new Error(reason));
+        }
+        resolve({ stdout, stderr, exitCode });
+      });
 
-        proc.on('error', (err: Error) => {
-          console.error(`child process errored: ${err.toString()}`);
-          reject(err);
-        });
+      proc.on('error', (err: Error) => {
+        console.error(`child process errored: ${err.toString()}`);
+        reject(err);
+      });
 
-        proc.stdout.on('data', (data: any) => {
-          stdout += data.toString();
-        });
+      proc.stdout.on('data', (data: any) => {
+        stdout += data.toString();
+      });
 
-        proc.stderr.on('data', (data: any) => {
-          stderr += data.toString();
-        });
-      },
-    );
+      proc.stderr.on('data', (data: any) => {
+        stderr += data.toString();
+      });
+    });
   }
 }
 
