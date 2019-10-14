@@ -44,7 +44,7 @@
     "terminate": "^2.1.2",
     "tslint": "^5.15.0",
     "tslint-config-prettier": "^1.13.0",
-    "tslint-config-standard": "^7.0.0",
+    "tslint-config-standard": "^8.0.0",
     "tslint-language-service": "^0.9.8",
     "tslint-no-circular-imports": "^0.6.1",
     "ttypescript": "^1.5.7",
