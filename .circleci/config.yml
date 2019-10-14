@@ -3,7 +3,7 @@ version: 2.1
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:10.16.3-browsers
+    - image: circleci/node:latest-browsers
 
 commands:
   test:
@@ -21,6 +21,12 @@ commands:
       - run: yarn all
 
 jobs:
+  test_3_5_1:
+    <<: *defaults
+    steps:
+      - test:
+          typescript_version: "3.5.1"
+
   test_3_4_1:
     <<: *defaults
     steps:
@@ -39,4 +45,5 @@ workflows:
   test-deploy:
     jobs:
       - test_3_4_1
+      - test_3_5_1
       - test

@@ -24,7 +24,7 @@ import { TypeExtractorOptions } from '../../engine/types';
 import { SourceFileVisitorClass } from '../../engine/visitor';
 
 export function transformUnitTestProgram(
-  t: ExecutionContext<{}>,
+  t: ExecutionContext<unknown>,
   programName: string,
   {
     extraFiles = [],

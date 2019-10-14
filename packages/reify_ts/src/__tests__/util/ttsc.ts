@@ -27,7 +27,7 @@ import { ProgramTransformationResultWrapper } from './type_util';
  * The version of TypeScript to use.  If you update this line, please
  * update the build matrix in `.circleci/config.yml`.
  */
-const TYPESCRIPT_VERSION = '3.5.1';
+const TYPESCRIPT_VERSION = '3.6.4';
 
 /**
  * The constant file name where the type ASTs are stored after the
@@ -60,7 +60,7 @@ export class TsTestPackage extends TestPackage<TsTestPackageOptions> {
       version: packageJson.version,
       dependencies: {
         'reify-ts': packageJson.version,
-        'ts-node': '^4',
+        'ts-node': '^8.4.1',
         typescript: TYPESCRIPT_VERSION,
         ttypescript: '^1.5.7',
       },
@@ -110,7 +110,7 @@ export class TsTestPackage extends TestPackage<TsTestPackageOptions> {
 
   /** Gets the type ASTs that are gathered by ts_plugin. */
   async getProgramTransformationResult(
-    t: ExecutionContext<{}>,
+    t: ExecutionContext<unknown>,
   ): Promise<ProgramTransformationResultWrapper> {
     return new ProgramTransformationResultWrapper(
       {
@@ -136,9 +136,11 @@ export class TsWatcher implements ExternalResource {
   async setup() {
     this.proc = this.pkg.spawnYarn(['ttsc', '--watch']);
 
-    this.proc.stderr.on('data', (data: any) => {
-      console.log('STDERR:', data.toString());
-    });
+    if (this.proc.stderr) {
+      this.proc.stderr.on('data', (data: any) => {
+        console.log('STDERR:', data.toString());
+      });
+    }
   }
 
   /** @override */
@@ -163,7 +165,7 @@ export class TsWatcher implements ExternalResource {
         const listener = (data: any) => {
           const dataStr: string = data.toString();
           if (dataStr.includes('Watching for file changes.')) {
-            this.proc!.stdout.removeListener('data', listener);
+            this.proc!.stdout!.removeListener('data', listener);
             const match = dataStr.match(/Found ([0-9]+) error/);
             if (!match) {
               reject(new Error(`cannot find error count in <<<${dataStr}>>>`));
@@ -181,7 +183,7 @@ export class TsWatcher implements ExternalResource {
             }
           }
         };
-        this.proc.stdout.on('data', listener);
+        this.proc.stdout!.on('data', listener);
       }
     });
   }

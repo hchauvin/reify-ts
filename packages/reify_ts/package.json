@@ -18,12 +18,12 @@
     "@types/benchmark": "^1.0.31",
     "@types/fs-extra": "^5.0.5",
     "@types/lodash": "^4.14.106",
-    "@types/node": "^8.0.47",
-    "@types/react": "^16.8.10",
+    "@types/node": "^12.7.12",
+    "@types/react": "^16.9.5",
     "@types/rimraf": "^2.0.2",
     "@types/sinon": "^2.3.7",
     "antd": "^3.15.2",
-    "ava": "^1.4.1",
+    "ava": "^2.4.0",
     "benchmark": "^2.1.4",
     "coveralls": "^3.0.2",
     "fast-check": "^1.5.0",
@@ -50,15 +50,17 @@
     "typedoc": "^0.14.2",
     "typedoc-plugin-external-module-name": "^2.0.0",
     "typelevel-ts": "^0.3.5",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "source-map": "^0.7.3",
+    "source-map-support": "^0.5.13"
   },
   "peerDependencies": {
     "typescript": ">= 3.4.1"
   },
   "scripts": {
     "clean": "rimraf lib dist es typedoc",
-    "test": "ava 'lib/**/__tests__/*.{test,it}.js' --verbose --concurrency=20",
-    "cov": "yarn nyc --reporter=html --reporter=text ava 'lib/**/__tests__/*.{test,it}.js' --verbose --concurrency=20",
+    "test": "ava --verbose --concurrency=20",
+    "cov": "yarn nyc --reporter=html --reporter=text ava --verbose --concurrency=20",
     "cov:upload": "yarn nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls",
     "perf": "node lib/benchmark",
     "build:es": "tsc -p tsconfig.json --declaration --module esnext --outDir ./es",
@@ -70,6 +72,9 @@
     "all": "yarn clean && yarn build && yarn format:check && yarn lint && yarn test",
     "precommit": "lint-staged",
     "doc": "typedoc --options typedoc.js src"
+  },
+  "ava": {
+    "files": ["lib/**/__tests__/*.{test,it}.js"]
   },
   "lint-staged": {
     "{./*,typescript/**/*}.{js,jsx,ts,tsx,css,scss,md,json}": "prettier -l",

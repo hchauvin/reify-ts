@@ -24,10 +24,18 @@ export class TypeConversionInvariantError extends BaseError {
       [
         `while processing type \`${typeStr}\``,
         msg,
-        `${cause && cause.stack}\n------`,
+        `${cause && getStack(cause)}\n------`,
       ]
         .filter(it => !!it)
         .join(': '),
     );
+  }
+}
+
+function getStack(cause: Error): string {
+  try {
+    return cause.stack || '<stack unavailable>';
+  } catch (err) {
+    return `<stack unavailable: ${err}>`;
   }
 }

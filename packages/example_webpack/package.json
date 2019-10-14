@@ -15,10 +15,10 @@
     "ttypescript": "^1.5.7"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.0.0",
+    "@babel/polyfill": "^7.6.0",
     "@types/lodash": "^4.14.106",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^8.0.47",
+    "@types/node": "^12.7.12",
     "@types/path-is-inside": "^1.0.0",
     "@types/puppeteer": "^1.5.1",
     "@types/query-string": "^5.1.0",
@@ -28,10 +28,10 @@
     "@types/terser-webpack-plugin": "^1.2.1",
     "@types/uuid": "^3.4.4",
     "@types/webpack-dev-server": "^3.1.1",
-    "ava": "^1.4.1",
+    "ava": "^2.4.0",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.12.0",
     "postcss-loader": "^2.1.4",
     "prettier": "^1.13.7",
     "sass-loader": "^7.0.3",
@@ -43,7 +43,7 @@
     "tslint-config-standard": "^7.0.0",
     "tslint-language-service": "^0.9.8",
     "tslint-no-circular-imports": "^0.6.1",
-    "typescript": "3.5.1",
+    "typescript": "3.6.4",
     "url-loader": "^1.0.1",
     "webpack": "^4.4.1",
     "webpack-cli": "^3.1.0",
@@ -54,12 +54,15 @@
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write --ignore-path .gitignore '**/*.ts'",
     "format:check": "prettier -l --list-different --ignore-path .gitignore '**/*.ts'",
-    "test": "ava build/**/__tests__/*.{test,it}.js",
+    "test": "ava",
     "all": "yarn format:check && yarn lint && yarn ts && yarn test",
     "precommit": "lint-staged",
     "web": "webpack-dev-server --config webpack.config",
     "doc": "echo 'SKIPPED'",
     "heroku-postbuild": "yarn web:build"
+  },
+  "ava": {
+    "files": ["build/**/__tests__/*.{test,it}.js"]
   },
   "lint-staged": {
     "{./*,typescript/**/*}.{js,jsx,ts,tsx,css,scss,md,json}": "prettier -l",
