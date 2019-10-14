@@ -3,7 +3,7 @@ version: 2.1
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:10.16.3-browsers
+    - image: circleci/node:latest-browsers
 
 commands:
   test:
@@ -13,15 +13,10 @@ commands:
         default: "3.6.4"
         description: TypeScript version to use
         type: string
-      types_node_version:
-        default: "10.14.21"
-        description: "@types/node version to use"
-        type: string
     steps:
       - checkout
       - run: yarn --frozen-lockfile
       - run: yarn update-dep typescript@<< parameters.typescript_version >>
-      - run: yarn update-dep @types/node@<< parameters.types_node_version >>
       - run: sed -i -E "s/TYPESCRIPT_VERSION = '[^']+'/TYPESCRIPT_VERSION = '<< parameters.typescript_version >>'/" packages/reify_ts/src/__tests__/util/ttsc.ts
       - run: yarn all
 
@@ -31,19 +26,15 @@ jobs:
     steps:
       - test:
           typescript_version: "3.5.1"
-          types_node_version: "8.0.47"
 
   test_3_4_1:
     <<: *defaults
     steps:
       - test:
           typescript_version: "3.4.1"
-          types_node_version: "8.0.47"
 
   test:
-    working_directory: ~/repo
-    docker:
-      - image: circleci/node:latest-browsers
+    <<: *defaults
     steps:
       - checkout
       - run: yarn --frozen-lockfile
