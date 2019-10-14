@@ -116,13 +116,17 @@ export class TestPackage<
         reject(err);
       });
 
-      proc.stdout.on('data', (data: any) => {
-        stdout += data.toString();
-      });
+      if (proc.stdout) {
+        proc.stdout.on('data', (data: any) => {
+          stdout += data.toString();
+        });
+      }
 
-      proc.stderr.on('data', (data: any) => {
-        stderr += data.toString();
-      });
+      if (proc.stderr) {
+        proc.stderr.on('data', (data: any) => {
+          stderr += data.toString();
+        });
+      }
     });
   }
 }

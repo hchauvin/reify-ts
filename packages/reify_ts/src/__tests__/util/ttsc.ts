@@ -136,9 +136,11 @@ export class TsWatcher implements ExternalResource {
   async setup() {
     this.proc = this.pkg.spawnYarn(['ttsc', '--watch']);
 
-    this.proc.stderr.on('data', (data: any) => {
-      console.log('STDERR:', data.toString());
-    });
+    if (this.proc.stderr) {
+      this.proc.stderr.on('data', (data: any) => {
+        console.log('STDERR:', data.toString());
+      });
+    }
   }
 
   /** @override */
@@ -163,7 +165,7 @@ export class TsWatcher implements ExternalResource {
         const listener = (data: any) => {
           const dataStr: string = data.toString();
           if (dataStr.includes('Watching for file changes.')) {
-            this.proc!.stdout.removeListener('data', listener);
+            this.proc!.stdout!.removeListener('data', listener);
             const match = dataStr.match(/Found ([0-9]+) error/);
             if (!match) {
               reject(new Error(`cannot find error count in <<<${dataStr}>>>`));
@@ -181,7 +183,7 @@ export class TsWatcher implements ExternalResource {
             }
           }
         };
-        this.proc.stdout.on('data', listener);
+        this.proc.stdout!.on('data', listener);
       }
     });
   }
