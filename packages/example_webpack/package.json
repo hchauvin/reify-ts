@@ -31,7 +31,7 @@
     "ava": "^1.4.1",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.12.0",
     "postcss-loader": "^2.1.4",
     "prettier": "^1.13.7",
     "sass-loader": "^7.0.3",
