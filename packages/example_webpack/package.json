@@ -1,6 +1,6 @@
 {
   "name": "example-webpack",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Example usage of reify-ts with webpack",
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",
@@ -11,7 +11,7 @@
     "puppeteer": "^1.6.0-next.1532381444032",
     "react": "^16.8.6",
     "react-dom": "^16.8.3",
-    "reify-ts": "^1.0.4",
+    "reify-ts": "^1.1.0",
     "ttypescript": "^1.5.7"
   },
   "devDependencies": {
@@ -62,7 +62,9 @@
     "heroku-postbuild": "yarn web:build"
   },
   "ava": {
-    "files": ["build/**/__tests__/*.{test,it}.js"]
+    "files": [
+      "build/**/__tests__/*.{test,it}.js"
+    ]
   },
   "lint-staged": {
     "{./*,typescript/**/*}.{js,jsx,ts,tsx,css,scss,md,json}": "prettier -l",
