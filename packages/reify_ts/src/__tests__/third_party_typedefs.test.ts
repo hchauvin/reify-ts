@@ -26,7 +26,7 @@ type ThirdPartyTypeDefinition = {
 };
 
 const thirdPartyTypeDefinitions: ThirdPartyTypeDefinition[] = [
-  { name: 'node', path: '@types/node/index.d.ts' },
+  // { name: 'node', path: '@types/node/index.d.ts' },
   { name: 'node_inspector', path: '@types/node/inspector.d.ts' },
   { name: 'lodash', path: '@types/lodash/index.d.ts' },
   { name: 'react', path: '@types/react/index.d.ts' },

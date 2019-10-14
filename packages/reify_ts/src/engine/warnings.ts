@@ -56,6 +56,7 @@ export const WARNINGS = {
   anyType: () =>
     'an "any" type has been encountered; use "unknown", the type-safe counterpart of "any", to remove this warning',
   neverType: () => 'a "never" type has been encountered',
+  globalThis: () => '"globalThis" has been encountered',
   keyofType: (typeStr: string) => `the "${typeStr}" type could not be expanded`,
   conditionalType: (typeStr: string) =>
     `a conditional type could not be expanded: ${typeStr}`,
