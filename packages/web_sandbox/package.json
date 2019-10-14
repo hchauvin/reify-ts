@@ -16,7 +16,7 @@
     "ttypescript": "^1.5.7"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.0.0",
+    "@babel/polyfill": "^7.6.0",
     "@types/codemirror": "^0.0.74",
     "@types/node": "^12.7.12",
     "@types/react": "^16.8.6",

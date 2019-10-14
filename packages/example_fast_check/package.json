@@ -19,7 +19,7 @@
     "all": "yarn ts && yarn test"
   },
   "devDependencies": {
-    "ava": "^1.4.1",
+    "ava": "^2.4.0",
     "typescript": "3.6.2"
   },
   "sideEffects": false,

@@ -60,7 +60,7 @@ export class TsTestPackage extends TestPackage<TsTestPackageOptions> {
       version: packageJson.version,
       dependencies: {
         'reify-ts': packageJson.version,
-        'ts-node': '^4',
+        'ts-node': '^8.4.1',
         typescript: TYPESCRIPT_VERSION,
         ttypescript: '^1.5.7',
       },
