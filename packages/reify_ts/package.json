@@ -51,7 +51,8 @@
     "typedoc-plugin-external-module-name": "^2.0.0",
     "typelevel-ts": "^0.3.5",
     "vue": "^2.6.10",
-    "source-map": "^0.7.3"
+    "source-map": "^0.7.3",
+    "source-map-support": "^0.5.13"
   },
   "peerDependencies": {
     "typescript": ">= 3.4.1"

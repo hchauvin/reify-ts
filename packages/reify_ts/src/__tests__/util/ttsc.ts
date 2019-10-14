@@ -27,7 +27,7 @@ import { ProgramTransformationResultWrapper } from './type_util';
  * The version of TypeScript to use.  If you update this line, please
  * update the build matrix in `.circleci/config.yml`.
  */
-const TYPESCRIPT_VERSION = '3.6.2';
+const TYPESCRIPT_VERSION = '3.6.4';
 
 /**
  * The constant file name where the type ASTs are stored after the
