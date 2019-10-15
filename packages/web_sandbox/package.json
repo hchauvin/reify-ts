@@ -34,7 +34,7 @@
     "sass-loader": "^7.0.3",
     "style-loader": "^1.0.0",
     "terminate": "^2.1.2",
-    "terser-webpack-plugin": "^1.1.0",
+    "terser-webpack-plugin": "^2.0.0",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.13.0",
