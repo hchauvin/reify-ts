@@ -20,7 +20,7 @@
     "tslint-config-prettier": "^1.13.0",
     "tslint-config-standard": "^7.0.0",
     "tslint-language-service": "^0.9.8",
-    "tslint-no-circular-imports": "^0.6.1"
+    "tslint-no-circular-imports": "^0.7.0"
   },
   "peerDependencies": {
     "typescript": ">= 3.4.1"
