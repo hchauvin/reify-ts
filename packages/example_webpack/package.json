@@ -34,7 +34,7 @@
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.13.7",
-    "sass-loader": "^7.0.3",
+    "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "terminate": "^2.1.2",
     "terser-webpack-plugin": "^2.0.0",
