@@ -6,7 +6,7 @@
   "repository": "git@github.com:hchauvin/reify-ts.git",
   "author": "Hadrien Chauvin",
   "dependencies": {
-    "date-fns": "^1.30.1",
+    "date-fns": "^2.0.0",
     "fast-check": "^1.5.0",
     "io-ts": "^1.8.5",
     "reify-ts": "^1.1.0",
@@ -15,8 +15,10 @@
   "scripts": {
     "ts": "ttsc -p tsconfig.json",
     "start": "node build/index.js",
+    "format": "prettier --write --ignore-path .gitignore '**/*.ts'",
+    "format:check": "prettier -l --list-different --ignore-path .gitignore '**/*.ts'",
     "test": "ava",
-    "all": "yarn ts && yarn test"
+    "all": "yarn format:check && yarn ts && yarn test"
   },
   "ava": {
     "files": [
@@ -25,7 +27,8 @@
   },
   "devDependencies": {
     "ava": "^2.4.0",
-    "typescript": "3.6.4"
+    "typescript": "3.6.4",
+    "prettier": "^1.13.7"
   },
   "sideEffects": false,
   "keywords": [
