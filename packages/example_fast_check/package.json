@@ -15,8 +15,10 @@
   "scripts": {
     "ts": "ttsc -p tsconfig.json",
     "start": "node build/index.js",
+    "format": "prettier --write --ignore-path .gitignore '**/*.ts'",
+    "format:check": "prettier -l --list-different --ignore-path .gitignore '**/*.ts'",
     "test": "ava",
-    "all": "yarn ts && yarn test"
+    "all": "yarn format:check && yarn ts && yarn test"
   },
   "ava": {
     "files": [
@@ -25,7 +27,8 @@
   },
   "devDependencies": {
     "ava": "^2.4.0",
-    "typescript": "3.6.4"
+    "typescript": "3.6.4",
+    "prettier": "^1.13.7"
   },
   "sideEffects": false,
   "keywords": [

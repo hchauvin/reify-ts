@@ -17,7 +17,7 @@ import {
   ExampleResponse,
 } from '../api';
 import fc from 'fast-check';
-import { isAfter, isEqual } from 'date-fns';
+import { isAfter, isEqual, parseISO } from 'date-fns';
 import { disablePassThrough } from 'reify-ts/lib/runtime/pass_through';
 import { registerBrands } from '../brands';
 
@@ -33,8 +33,8 @@ test('impl', t => {
       t.assert(response.messages.length <= request.limit);
       for (const message of response.messages) {
         t.assert(
-          isAfter(message.date, request.after) ||
-            isEqual(message.date, request.after),
+          isAfter(parseISO(message.date), parseISO(request.after)) ||
+            isEqual(parseISO(message.date), parseISO(request.after)),
         );
       }
     }),

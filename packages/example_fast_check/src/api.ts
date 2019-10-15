@@ -11,7 +11,7 @@ import { getValidator } from './validator';
 import { ApiLimit } from './brands/api_limit';
 import { DateString } from './brands';
 import fc from 'fast-check';
-import { addDays } from 'date-fns';
+import { addDays, parseISO } from 'date-fns';
 
 /** An API handler sitting at an I/O boundary */
 export function exampleApi(requestAny: any): any {
@@ -38,7 +38,7 @@ export function exampleApiImpl(request: ExampleRequest): ExampleResponse {
 
   return {
     messages: messages.map((message, index) => ({
-      date: addDays(request.after, index).toISOString() as DateString,
+      date: addDays(parseISO(request.after), index).toISOString() as DateString,
       message,
     })),
   };
