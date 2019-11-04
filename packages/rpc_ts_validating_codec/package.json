@@ -18,7 +18,7 @@
     "prettier": "^1.13.7",
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.13.0",
-    "tslint-config-standard": "^8.0.0",
+    "tslint-config-standard": "^9.0.0",
     "tslint-language-service": "^0.9.8",
     "tslint-no-circular-imports": "^0.7.0"
   },
