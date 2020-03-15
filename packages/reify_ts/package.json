@@ -42,7 +42,7 @@
     "source-map": "^0.7.3",
     "source-map-support": "^0.5.13",
     "terminate": "^2.1.2",
-    "tslint": "^5.15.0",
+    "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-config-standard": "^9.0.0",
     "tslint-language-service": "^0.9.8",

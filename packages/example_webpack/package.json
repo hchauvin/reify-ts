@@ -38,7 +38,7 @@
     "style-loader": "^1.0.0",
     "terminate": "^2.1.2",
     "terser-webpack-plugin": "^2.0.0",
-    "tslint": "^5.9.1",
+    "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-config-standard": "^9.0.0",
     "tslint-language-service": "^0.9.8",
