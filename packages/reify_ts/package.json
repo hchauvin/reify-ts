@@ -28,7 +28,7 @@
     "coveralls": "^3.0.2",
     "fast-check": "^1.5.0",
     "fp-ts": "^1.15.0",
-    "fs-extra": "^8.0.0",
+    "fs-extra": "^9.0.0",
     "immutable": "^4.0.0-rc.12",
     "io-ts": "^1.8.5",
     "mobx": "^5.9.4",
