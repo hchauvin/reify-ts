@@ -28,7 +28,7 @@
   "devDependencies": {
     "ava": "^2.4.0",
     "typescript": "3.6.4",
-    "prettier": "^1.13.7"
+    "prettier": "^2.0.0"
   },
   "sideEffects": false,
   "keywords": [
