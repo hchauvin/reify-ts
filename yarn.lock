@@ -11237,10 +11237,10 @@ typedoc-default-themes@^0.6.0:
     lunr "^2.3.6"
     underscore "^1.9.1"
 
-typedoc-plugin-external-module-name@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-external-module-name/-/typedoc-plugin-external-module-name-3.0.0.tgz#d05604c3f8ac618320511b797e7b7ebaa75cb5e6"
-  integrity sha512-mTPO5Z+HIrM3b24A5/auFg+7ps7Y1jAGuccnOBhHcfUH3ZedInYdJuFcdisjDCW0i8BmRzCShB/KEpiG64oIWw==
+typedoc-plugin-external-module-name@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-external-module-name/-/typedoc-plugin-external-module-name-4.0.0.tgz#d40c5914ad0cf7709a6e54123e65541b854c2675"
+  integrity sha512-S/j6ctXxIsecxA0+NNCaD7C9Z3XrmuwEMW890pen6+zt4uyyYSokt7xB+NfOV48O+JzAgx9y7WwWadJ5vrzdew==
   dependencies:
     lodash "^4.1.2"
     semver "^7.1.1"
