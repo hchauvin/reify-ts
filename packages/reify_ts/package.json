@@ -51,7 +51,7 @@
     "type-zoo": "^3.3.0",
     "typedoc": "^0.15.0",
     "typedoc-plugin-external-module-name": "^4.0.0",
-    "typelevel-ts": "^0.3.5",
+    "typelevel-ts": "^0.4.0",
     "vue": "^2.6.10"
   },
   "peerDependencies": {
