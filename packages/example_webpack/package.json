@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "fetch-suspense": "^1.0.2",
-    "puppeteer": "^3.0.0",
+    "puppeteer": "^4.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.3",
     "reify-ts": "^1.1.0",
