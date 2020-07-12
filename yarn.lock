@@ -1366,10 +1366,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/mocha@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-7.0.0.tgz#ac65f97746464ec84ce15f4743cd61c449822ad4"
-  integrity sha512-6mh1VlA343Ax31blo37+KZ0DxDOA8b6cL963xPOOt7fMYtG07aJJ+0FRLvcDO4KrL45faOS104G7kwAjZc9l4w==
+"@types/mocha@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-8.0.0.tgz#b0ba1c5b4cb3880c51a6b488ad007a657d1be888"
+  integrity sha512-jWeYcTo3sCH/rMgsdYXDTO85GNRyTCII5dayMIu/ZO4zbEot1E3iNGaOwpLReLUHjeNQFkgeNNVYlY4dX6azQQ==
 
 "@types/node@*":
   version "10.12.4"
