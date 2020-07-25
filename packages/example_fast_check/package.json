@@ -7,7 +7,7 @@
   "author": "Hadrien Chauvin",
   "dependencies": {
     "date-fns": "^2.0.0",
-    "fast-check": "^1.5.0",
+    "fast-check": "^2.0.0",
     "io-ts": "^1.8.5",
     "reify-ts": "^1.1.0",
     "ttypescript": "^1.5.7"
