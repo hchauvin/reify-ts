@@ -4527,13 +4527,12 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
-fast-check@^1.5.0:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/fast-check/-/fast-check-1.7.1.tgz#081bc2e133db0b004ba0b1933542dc83124624e3"
-  integrity sha512-+hl6GWy+UhrpHoSjw9W5p5L5YOgEsWAL3DygnX7MxfPtzOrQ84rYlM3XH+aotnFTBSn5IqqTc30BDiflOD2HHA==
+fast-check@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/fast-check/-/fast-check-2.0.0.tgz#e460ebb5f615c026467c5a7734b4112c50b9a32f"
+  integrity sha512-ef4Au3VLUnqVZVd5vccLd4/cgRsu5lmfj7wpfMdS7OlgS2z3QNd5WmpocHCk/XSQ07Ps8phg0KgLbNzLByp4fw==
   dependencies:
-    lorem-ipsum "~1.0.6"
-    pure-rand "^1.5.0"
+    pure-rand "^3.0.0"
 
 fast-deep-equal@^2.0.1:
   version "2.0.1"
@@ -6788,13 +6787,6 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lorem-ipsum@~1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/lorem-ipsum/-/lorem-ipsum-1.0.6.tgz#69e9ab02bbb0991915d71b5559fe016d526f013f"
-  integrity sha512-Rx4XH8X4KSDCKAVvWGYlhAfNqdUP5ZdT4rRyf0jjrvWgtViZimDIlopWNfn/y3lGM5K4uuiAoY28TaD+7YKFrQ==
-  dependencies:
-    minimist "~1.2.0"
-
 loud-rejection@^1.0.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
@@ -7210,7 +7202,7 @@ minimist@0.0.8:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
 
-minimist@^1.1.3, minimist@^1.2.0, minimist@~1.2.0:
+minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
   integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
@@ -8751,10 +8743,10 @@ puppeteer@^3.0.0:
     unbzip2-stream "^1.3.3"
     ws "^7.2.3"
 
-pure-rand@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/pure-rand/-/pure-rand-1.5.0.tgz#4deaa72034e67fbe4e7e53ebeceb161030999857"
-  integrity sha512-acykcCwcBmt5l4w/lPxPUxMeYLb6qwsve3v9A44SNckwOyuXxZgTfP5qAsH/CyZSGkHdUnOQGmckOExOldivOw==
+pure-rand@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pure-rand/-/pure-rand-3.0.0.tgz#9dd90685e0c6ff98871f656a5e37fe90d2bfe0e4"
+  integrity sha512-7/U3rk8elhZPagxdheW1UHEhRr0IF8wCs3qyYVVswSxLoRrrrCMyaTKtAYIrCfuTeUoX/O3rN1piY/pX8JEcEA==
 
 q@^1.5.1:
   version "1.5.1"
