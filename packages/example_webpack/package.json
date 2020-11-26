@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "fetch-suspense": "^1.0.2",
-    "puppeteer": "^3.0.0",
+    "puppeteer": "^5.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.3",
     "reify-ts": "^1.1.0",
@@ -20,7 +20,7 @@
     "@types/mocha": "^7.0.0",
     "@types/node": "^12.7.12",
     "@types/path-is-inside": "^1.0.0",
-    "@types/puppeteer": "^3.0.0",
+    "@types/puppeteer": "^5.0.0",
     "@types/query-string": "^6.0.0",
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.3",
