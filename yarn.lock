@@ -498,10 +498,10 @@
   dependencies:
     arrify "^1.0.1"
 
-"@improbable-eng/grpc-web-node-http-transport@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@improbable-eng/grpc-web-node-http-transport/-/grpc-web-node-http-transport-0.11.0.tgz#556cb7334d1a9fe88e913d357fa6244c3a1495b0"
-  integrity sha512-W4px5VQaXL+IXXW2RCceD/JARYHPArTclChP71+nFTvjWl2zGab22rOp3U8HsX7IXOSTl/BHvg2BOT6BRTqhaA==
+"@improbable-eng/grpc-web-node-http-transport@^0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@improbable-eng/grpc-web-node-http-transport/-/grpc-web-node-http-transport-0.15.0.tgz#5a064472ef43489cbd075a91fb831c2abeb09d68"
+  integrity sha512-HLgJfVolGGpjc9DWPhmMmXJx8YGzkek7jcCFO1YYkSOoO81MWRZentPOd/JiKiZuU08wtc4BG+WNuGzsQB5jZA==
 
 "@improbable-eng/grpc-web@^0.11.0":
   version "0.11.0"
