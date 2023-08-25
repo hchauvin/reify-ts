@@ -49,7 +49,7 @@
     "tslint-no-circular-imports": "^0.7.0",
     "ttypescript": "^1.5.7",
     "type-zoo": "^3.3.0",
-    "typedoc": "^0.15.0",
+    "typedoc": "^0.25.0",
     "typedoc-plugin-external-module-name": "^4.0.0",
     "typelevel-ts": "^0.3.5",
     "vue": "^2.6.10"
